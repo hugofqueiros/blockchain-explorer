@@ -1,0 +1,16 @@
+.tablecell {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tablepaper {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.accountdiv {
+    display: flex
+}
