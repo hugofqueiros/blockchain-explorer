@@ -17,7 +17,7 @@ import { Menu, ChevronLeft, Podcasts } from "@mui/icons-material";
 import { Drawer } from "./Drawer";
 import { AppBar } from "./AppBar";
 import { Nav } from "./Nav";
-import { ClientContext } from "@/app/dashboard/layout";
+import { ClientContext } from "@/app/dashboard/context";
 
 const defaultTheme = createTheme();
 

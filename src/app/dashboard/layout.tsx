@@ -1,12 +1,12 @@
 "use client"
 
-import { useEffect, useState, createContext } from "react";
+import { useEffect, useState } from "react";
 import { StargateClient } from "@cosmjs/stargate";
 
 import { Dashboard } from "@/features";
-import { CUDOS_DEFAULT_ADDRESS, RPC_ENDPOINT } from "@/utils/constants";
+import { RPC_ENDPOINT } from "@/utils/constants";
+import { ClientContext } from "./context";
 
-export const ClientContext = createContext(null);
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     const [client, setClient] = useState<StargateClient>();
@@ -17,6 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             connectStargate();
             setIsLoading(false);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[isLoading]);
 
     const connectStargate = async () => {

@@ -6,14 +6,14 @@ import { connect } from "@/utils/connect";
 
 const connectClient = async () => {
     try {
-        const client = await connect();
+        const socketClient = await connect();
 
-        if (!client) {
+        if (!socketClient) {
             console.log("ERROR client");
             return;
         }
 
-        console.log("Connect to websocket: ", client);
+        console.log("Connect to websocket: ", socketClient);
     } catch (err) {
         console.error("catch error:", err);
         return;
